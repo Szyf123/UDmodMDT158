@@ -1,0 +1,8 @@
+{
+  "name": "结核矿",
+  "hardness": 2,
+  "cost": 4,
+  "color": "1F1F1F",
+  "alwaysUnlocked": "false",
+  "research": "heavy-stone"
+}

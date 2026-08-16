@@ -1,0 +1,38 @@
+{
+    "type": "GenericCrafter",
+    "name": "包膜机",         // 游戏内显示的名称
+    "description": "将酸液打包为酸液囊",     // 建筑描述
+    "size": 2,                              // 建筑尺寸，3x3
+    "rotate": "false",
+
+    "itemCapacity": 20,
+    "liquidCapacity": 30,
+
+    // --- 建造需求 ---
+    "requirements": [
+        "copper/100",
+        "lead/80"        // 用你模组里的材料或原版材料
+    ],
+    "category": "crafting",                 // 在“制造”分类下
+    "research": "fac-Ionization",              // 科技树前置
+
+    // --- 生产效率 ---
+    "craftTime": 40,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
+
+    // --- 消耗配置 (只消耗电力) ---
+    "consumes": {
+        "items": [
+            { "item": "seaweed-bundle", "amount": 2 }
+        ],
+        "liquids": [
+            { "liquid": "acid-solution", "amount": 0.1 }
+        ]
+    }
+    // --- 产出配置 (产出两种液体) ---
+    "outputItems": [
+        {
+            "item": "acid-cell",
+            "amount": 1
+        }
+    ]
+}

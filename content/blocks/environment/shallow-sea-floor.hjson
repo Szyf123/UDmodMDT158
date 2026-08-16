@@ -1,0 +1,7 @@
+{
+    "type": "Floor",                // 类型为地板
+    "variants": 1,                // 可选，贴图变体数量，让地面看起来更自然
+    "attributes": {
+        "shallow-sea": 1.0
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "CoreBlock",
+    "name": "under-water-big-core",
+    "localizedName": "鲸落",
+    "size": 5,
+    "health": 600,
+    "itemCapacity": 600,
+    "tier": 3,
+    "requirements": [
+        "lead/30",
+        "copper/30",
+        "silicon/20"
+    ],
+    "category": "effect",
+    "research": "planetaryTerminal",
+    "buildVisibility": "shown",
+    "allowSpawn": "true",
+    "requiresCoreZone": "false",
+    "shownPlanets": ["rlyeh-planet"]
+}

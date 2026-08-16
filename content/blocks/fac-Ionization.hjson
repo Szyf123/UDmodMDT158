@@ -1,0 +1,46 @@
+{
+    "type": "GenericCrafter",
+    "name": "电离机"         // 游戏内显示的名称
+    "description": "消耗电力生产两种液体",     // 建筑描述
+    "size": 2,                              // 建筑尺寸，3x3
+    "rotate": "true",
+
+    "liquidCapacity": 60,
+
+    // --- 建造需求 ---
+    "requirements": [
+        "copper/100",
+        "lead/80"        // 用你模组里的材料或原版材料
+    ],
+    "category": "crafting",                 // 在“制造”分类下
+    "research": "heavy-stone",              // 科技树前置
+
+    // --- 生产效率 ---
+    "craftTime": 60,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
+
+    // --- 消耗配置 (只消耗电力) ---
+    "consumes": {
+        "power": 2                       // 持续耗电功率[reference:3]
+    },
+    // --- 产出配置 (产出两种液体) ---
+    "outputLiquids": [
+        {
+            "liquid": "acid-solution",              // 第一种液体，换成你模组里的液体ID
+            "amount": 0.25                  // 每轮产出量（液体单位）
+        },
+        {
+            "liquid": "fresh-water",          // 第二种液体，换成你模组里的液体ID
+            "amount": 0.25                  // 每轮产出量
+        }
+    ],
+
+    // --- 自动停止逻辑（核心！）---
+    // 当任意一种输出液体满了，工厂会自动停止，无需额外配置。
+    // 这是 GenericCrafter 对 outputLiquids 的默认行为。
+
+    // --- 其他可选属性 ---
+    // 液体输出方向，-1 表示向所有方向排出[reference:4]
+    "liquidOutputDirections": [0, 2],
+    // 是否在仍有空间时排出多余液体[reference:5]
+    "dumpExtraLiquid": "false"
+}

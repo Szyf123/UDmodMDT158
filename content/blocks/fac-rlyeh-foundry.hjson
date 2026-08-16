@@ -1,0 +1,42 @@
+{
+    "type": "AttributeCrafter",
+    "name": "深渊铸造厂",         // 游戏内显示的名称
+    "description": "锻造带有超压特性的合金",     // 建筑描述
+    "size": 3,                              // 建筑尺寸，3x3
+    "rotate": "false",
+
+    "itemCapacity": 30,
+
+    // --- 建造需求 ---
+    "requirements": [
+        "copper/100",
+        "lead/80"        // 用你模组里的材料或原版材料
+    ],
+    "category": "crafting",                 // 在“制造”分类下
+    "research": "fac-Ionization",              // 科技树前置
+
+    "attribute": "deep-sea",   // 这里依赖深海属性
+    "baseEfficiency": 0.1,
+    "boostScale": 0.1,
+    "minEfficiency": 0.15,
+
+    // --- 生产效率 ---
+    "craftTime": 80,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
+
+    // --- 消耗配置 (只消耗电力) ---
+    "consumes": {
+        "items": [
+            { "item": "heavy-stone", "amount": 5 },
+            { "item": "chip", "amount": 3 },
+            { "item": "ceramic-steel", "amount": 2 }
+        ],
+        "power": 6
+    },
+    // --- 产出配置 (产出两种液体) ---
+    "outputItems": [
+        {
+            "item": "rlyeh-alloy",
+            "amount": 1
+        }
+    ]
+}

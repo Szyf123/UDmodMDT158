@@ -1,0 +1,8 @@
+{
+  "name": "石英砂",
+  "hardness": 0,
+  "cost": 1,
+  "color": "E8D4AA",
+  "alwaysUnlocked": "false",
+  "research": "under-water-small-core"
+}

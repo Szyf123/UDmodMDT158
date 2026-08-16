@@ -1,0 +1,20 @@
+{
+    "type": "CoreBlock",
+    "name": "under-water-small-core",
+    "localizedName": "藤壶",
+    "size": 3,
+    "health": 1200,
+    "itemCapacity": 4000,
+    "tier": 1,
+    "requirements": [
+        "heavy-stone/1200",
+        "quartz-sand/600"
+    ],
+    "category": "effect",
+    "research": "planetaryTerminal",
+    "buildVisibility": "shown",
+    "allowSpawn": "true",
+    "requiresCoreZone": "false",
+    "unitType": "player1",
+    "shownPlanets": ["rlyeh-planet"]
+}

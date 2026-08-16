@@ -1,0 +1,7 @@
+{
+  "name": "承压玻璃",
+  "cost": 3,
+  "color": "A1A1A1",
+  "alwaysUnlocked": "false",
+  "research": "heavy-stone"
+}

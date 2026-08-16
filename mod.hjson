@@ -1,0 +1,10 @@
+{
+  "name": "ud-mod",
+  "displayName": "Under the Deep",
+  "author": "杉沢御风",
+  "description": "一个JSON模组尝试。",
+  "version": "0.5",
+  "minGameVersion": "158",
+  "dependencies": [],
+  "main": "scripts/main.js"
+}

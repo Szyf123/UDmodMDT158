@@ -1,0 +1,36 @@
+{
+    "type": "GenericCrafter",
+    "name": "高级蚀刻机",         // 游戏内显示的名称
+    "description": "将基础晶元升级",     // 建筑描述
+    "size": 3,                              // 建筑尺寸，3x3
+    "rotate": "false",
+
+    "itemCapacity": 10,
+
+    // --- 建造需求 ---
+    "requirements": [
+        "copper/100",
+        "lead/80"        // 用你模组里的材料或原版材料
+    ],
+    "category": "crafting",                 // 在“制造”分类下
+    "research": "fac-Ionization",              // 科技树前置
+
+    // --- 生产效率 ---
+    "craftTime": 75,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
+
+    // --- 消耗配置 (只消耗电力) ---
+    "consumes": {
+        "items": [
+            { "item": "chip", "amount": 2 },
+            { "item": "aurum", "amount": 3 }
+        ],
+        "power": 2.25
+    },
+    // --- 产出配置 (产出两种液体) ---
+    "outputItems": [
+        {
+            "item": "advanced-chip",
+            "amount": 2
+        }
+    ]
+}

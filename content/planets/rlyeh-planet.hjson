@@ -1,0 +1,57 @@
+{
+    // 内部名称（必须与文件名一致）
+    "name": "rlyeh-planet",
+
+    // 游戏中显示的名称
+    "localizedName": "拉莱耶",
+
+    // 绕谁公转（原版就是 sun）
+    "parent": "sun",
+
+    "defaultCore": "under-water-small-core",
+
+    // 星球半径（Serpulo 和 Erekir 都是 1）
+    "radius": 1.2,
+
+    // 轨道半径（数值越大离中心越远）
+    "orbitRadius": 20,
+
+    // 区块细分密度（1=32区块, 2=122区块, 3=482区块；必须大于0）
+    "sectorSize": 2,
+
+    // 颜色（用于星图上的显示）
+    "color": "7595D2",
+
+    "iconColor": "7595D2",
+
+    //生成器：使用原版 Serpulo 生成器（通用性好，兼容自定义星球）
+    "generator": "serpulo",
+
+    // 大气层颜色（RGBA格式）
+    "atmosphereColor": "7595D2",
+
+    // 起始可用资源（进入星球时能带的东西）
+    "hiddenItems": [],
+
+    // 是否允许登陆此星球（必须为 true 才能进入星球视角）
+    "accessible": "true",
+
+    // 是否始终解锁（无需故事进度即可访问）
+    "alwaysUnlocked": "true",
+
+    // 起始区块编号（必须小于 sectorSize 产生的区块数。sectorSize=2 产生 122 个区块，编号0-121）
+    "startSector": 0,
+
+    // 行星外观配置
+    "mesh": {
+        "type": "NoiseMesh",
+        "planet": "rlyeh-planet",
+        "seed": 12345,
+        "divisions": 4,
+        "color1": "7595D2",
+        "color2": "3a4c73",
+        "radius": 1.2,
+        "octaves": 3,
+        "persistence": 0.8
+    }
+}

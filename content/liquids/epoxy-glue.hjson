@@ -1,0 +1,16 @@
+{
+    "name": "环氧胶",
+
+    "color": "FFE46FFF",
+    "lightColor": "FFE46F25",
+
+    "temperature": 0.5,
+    "heatCapacity": 0.3,
+    "viscosity": 0.9,
+
+    "gas": "false",
+    "gasColor": "FFFFFFFF",
+
+    "alwaysUnlocked": "false",
+    "research": "under-water-small-core"
+}

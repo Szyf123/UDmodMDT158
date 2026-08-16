@@ -1,0 +1,5 @@
+{
+  "type": "OreBlock",
+  "itemDrop": "heavy-stone",  // 指向你在 content/items/ 中定义的物品
+  "variants": 2  // 可选，让矿物在地图上看起来有变化
+}

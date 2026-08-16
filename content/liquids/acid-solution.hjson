@@ -1,0 +1,16 @@
+{
+    "name": "酸液",
+
+    "color": "A9CF74FF",
+    "lightColor": "#A9CF7480",
+
+    "temperature": 0.7,
+    "heatCapacity": 1.0,
+    "viscosity": 0.8,
+
+    "gas": "true",
+    "gasColor": "FFFFFFFF",
+
+    "alwaysUnlocked": "false",
+    "research": "under-water-small-core"
+}
