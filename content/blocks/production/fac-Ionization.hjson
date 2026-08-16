@@ -1,10 +1,11 @@
 {
     "type": "GenericCrafter",
-    "name": "电离机"         // 游戏内显示的名称
+    "name": "电离机",                        // 游戏内显示的名称
     "description": "消耗电力生产两种液体",     // 建筑描述
     "size": 2,                              // 建筑尺寸，3x3
     "rotate": "true",
 
+    "hasLiquids": true,
     "liquidCapacity": 60,
 
     // --- 建造需求 ---
@@ -43,4 +44,33 @@
     "liquidOutputDirections": [0, 2],
     // 是否在仍有空间时排出多余液体[reference:5]
     "dumpExtraLiquid": "false"
+
+    "drawer": [
+        // 1. 绘制底座（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "acid-solution",
+            "suffix": "-liquid-acid-solution"
+        },
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "fresh-water",
+            "suffix": "-liquid-fresh-water"
+        },
+        {
+            "type": "DrawRegion",
+            "suffix": "-rotated",
+            "buildingRotate": true
+        },
+        // 3. 绘制顶层（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-top"
+        }
+    ]
 }
