@@ -43,7 +43,7 @@
     // 液体输出方向，-1 表示向所有方向排出[reference:4]
     "liquidOutputDirections": [0, 2],
     // 是否在仍有空间时排出多余液体[reference:5]
-    "dumpExtraLiquid": "false"
+    "dumpExtraLiquid": "false",
 
     "drawer": [
         // 1. 绘制底座（不旋转）

@@ -5,6 +5,7 @@
     "size": 2,                              // 建筑尺寸，3x3
     "rotate": "false",
 
+    "hasLiquids": true,
     "itemCapacity": 20,
     "liquidCapacity": 30,
 
@@ -33,6 +34,31 @@
         {
             "item": "acid-cell",
             "amount": 1
+        }
+    ],
+
+    "drawer": [
+        // 1. 绘制底座（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "acid-solution",
+            "suffix": "-liquid-acid-solution"
+        },
+        {
+            "type": "DrawRegion",
+            "suffix": "-rotor",
+            "spinSprite": true,
+            "rotateSpeed": 2.0
+        },
+        // 3. 绘制顶层（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-top"
         }
     ]
 }
