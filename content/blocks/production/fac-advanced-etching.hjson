@@ -32,5 +32,14 @@
             "item": "advanced-chip",
             "amount": 2
         }
+    ],
+
+    "craftEffect": "pulverizeMedium",
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        }
     ]
 }

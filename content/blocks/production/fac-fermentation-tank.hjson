@@ -5,6 +5,7 @@
     "size": 2,                              // 建筑尺寸，3x3
     "rotate": "false",
 
+    "hasLiquids": true,
     "itemCapacity": 10,
     "liquidCapacity": 30,
 
@@ -35,5 +36,36 @@
             "liquid": "epoxy-glue",
             "amount": 0.2
         }
+    ],
+
+    "drawer": [
+        // 1. 绘制底座（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "epoxy-glue",
+            "suffix": "-liquid-epoxy-glue"
+        },
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "fresh-water",
+            "suffix": "-liquid-fresh-water"
+        },
+        {
+            "type": "DrawRegion",
+            "suffix": "-rotor",
+            "spinSprite": true,
+            "rotateSpeed": 2.0
+        },
+        // 3. 绘制顶层（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-top"
+        }
     ]
+
 }

@@ -1,6 +1,7 @@
 {
     "type": "AttributeCrafter",
-    "name": "深渊铸造厂",         // 游戏内显示的名称
+    "name": "fac-rlyeh-foundry",         // 游戏内显示的名称
+    "localizedName": "深渊铸造厂",
     "description": "锻造带有超压特性的合金",     // 建筑描述
     "size": 3,                              // 建筑尺寸，3x3
     "rotate": "false",
@@ -37,6 +38,19 @@
         {
             "item": "rlyeh-alloy",
             "amount": 1
+        }
+    ],
+
+    "craftEffect": "smeltsmoke",
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        {
+            "type": "DrawWarmupRegion",
+            "color": "ffffff"
         }
     ]
 }

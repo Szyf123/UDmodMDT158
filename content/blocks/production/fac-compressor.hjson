@@ -1,10 +1,12 @@
 {
     "type": "GenericCrafter",
-    "name": "陶钢压缩机",         // 游戏内显示的名称
+    "name": "fac-compressor",         // 内部标识符，必须与贴图文件名前缀一致
+    "localizedName": "陶钢压缩机",
     "description": "用结核矿生产硬质陶刚",     // 建筑描述
     "size": 3,                              // 建筑尺寸，3x3
     "rotate": "false",
 
+    "hasLiquids": true,
     "itemCapacity": 30,
     "liquidCapacity": 40,
 
@@ -28,12 +30,33 @@
             { "liquid": "fresh-water", "amount": 0.2 }
         ],
         "power": 2.5
-    }
+    },
     // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "ceramic-steel",
             "amount": 1
+        }
+    ],
+
+    "craftEffect": "pulverizeMedium",
+
+    "drawer": [
+        // 1. 绘制底座（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
+        {
+            "type": "DrawLiquidRegion",
+            "drawLiquid": "fresh-water",
+            "suffix": "-liquid-fresh-water"
+        },
+        // 3. 绘制顶层（不旋转）
+        {
+            "type": "DrawRegion",
+            "suffix": "-top"
         }
     ]
 }

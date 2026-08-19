@@ -24,12 +24,25 @@
             { "item": "quartz-sand", "amount": 2 }
         ],
         "power": 2
-    }
+    },
     // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "pressure-resistant-glass",
             "amount": 2
+        }
+    ],
+    
+    "craftEffect": "smeltsmoke",
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        {
+            "type": "DrawWarmupRegion",
+            "color": "ffffff"
         }
     ]
 }

@@ -37,5 +37,18 @@
             "item": "pressure-resistant-glass",
             "amount": 7
         }
+    ],
+
+    "craftEffect": "smeltsmoke",
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        {
+            "type": "DrawWarmupRegion",
+            "color": "ffffff"
+        }
     ]
 }

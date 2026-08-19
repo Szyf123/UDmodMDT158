@@ -30,9 +30,22 @@
         {"item": "aurum", "amount": 2},
         {"item": "palladium", "amount": 1}
     ],
+
+    "craftEffect": "smeltsmoke",
     
     // 定义稳定产出的液体列表 (这里产出水，每次生产输出10单位)
     "outputLiquids": [
         {"liquid": "acid-solution", "amount": 0.3}
+    ],
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        },
+        {
+            "type": "DrawWarmupRegion",
+            "color": "ffffff"
+        }
     ]
 }

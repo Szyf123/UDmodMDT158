@@ -36,5 +36,14 @@
             "item": "chip",
             "amount": 1
         }
+    ],
+
+    "craftEffect": "pulverizeMedium",
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        }
     ]
 }

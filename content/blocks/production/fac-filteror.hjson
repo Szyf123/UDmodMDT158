@@ -28,5 +28,12 @@
         {"item": "quartz-sand", "amount": 1, "chance": 0.4},
         {"item": "aurum", "amount": 1, "chance": 0.2},
         {"item": "palladium", "amount": 1, "chance": 0.15}
+    ],
+
+    "drawer": [
+        {
+            "type": "DrawRegion",
+            "suffix": "-bottom"
+        }
     ]
 }
