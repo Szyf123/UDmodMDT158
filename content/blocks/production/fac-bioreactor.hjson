@@ -1,12 +1,13 @@
 {
     "type": "GenericCrafter",
-    "name": "酵化罐",         // 游戏内显示的名称
-    "description": "发酵海藻生产环氧胶",     // 建筑描述
-    "size": 2,                              // 建筑尺寸，3x3
+    "name": "fac-bioreactor",         // 游戏内显示的名称
+    "localizedName": "生物反应器",
+    "description": "环氧胶与钯反应生产凝胶体",     // 建筑描述
+    "size": 3,                              // 建筑尺寸，3x3
     "rotate": "false",
 
     "hasLiquids": true,
-    "itemCapacity": 10,
+    "itemCapacity": 20,
     "liquidCapacity": 30,
 
     // --- 建造需求 ---
@@ -18,23 +19,24 @@
     "research": "fac-Ionization",              // 科技树前置
 
     // --- 生产效率 ---
-    "craftTime": 60,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
+    "craftTime": 96,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
 
     // --- 消耗配置 (只消耗电力) ---
     "consumes": {
         "items": [
-            { "item": "seaweed-bundle", "amount": 2 }
+            { "item": "palladium", "amount": 2 }
         ],
         "liquids": [
-            { "liquid": "fresh-water", "amount": 0.05 }
+            { "liquid": "epoxy-glue", "amount": 0.25 },
+            { "liquid": "fresh-water", "amount": 0.2 }
         ],
-        "power": 1.5
+        "power": 3.2
     },
     // --- 产出配置 (产出两种液体) ---
-    "outputLiquids": [
+    "outputItems": [
         {
-            "liquid": "epoxy-glue",
-            "amount": 0.2
+            "item": "palladium-colloid",
+            "amount": 1
         }
     ],
 
@@ -60,6 +62,12 @@
             "suffix": "-rotor",
             "spinSprite": true,
             "rotateSpeed": 2.0
+        },
+        {
+            "type": "DrawRegion",
+            "suffix": "-rotor",
+            "spinSprite": true,
+            "rotateSpeed": -2.0
         },
         // 3. 绘制顶层（不旋转）
         {

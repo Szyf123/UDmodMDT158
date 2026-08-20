@@ -1,0 +1,94 @@
+{
+    "type": "legs",
+    "name": "my-collaris",
+    "localizedName": "重炮蟹",
+    "description": "发射远程分裂炮弹的大型机械单位，可跨越大多数地形",
+
+    // --- 基础属性 (对标原版 Collaris) ---
+    "health": 18000,
+    "armor": 9,
+    "speed": 1.1,               // 8.25 tiles/sec
+    "rotateSpeed": 1.6,
+    "hitSize": 44,              // 5.5x5.5 格
+    "itemCapacity": 180,
+    "flying": false,
+
+    // --- 腿部配置 (4足IK行走) ---
+    "legCount": 6,
+    "legLength": 30,
+    "legSpeed": 0.1,
+    "legBaseOffset": 14,
+    "legGroupSize": 1,          // 对角交替步态
+    "legPairOffset": 0.5,
+    "legMoveSpace": 1.0,
+    "legForwardScl": 1.0,
+    "legMinLength": 0.6,
+    "legMaxLength": 1.3,
+    "legLengthScl": 1.0,
+    "legSplashDamage": 32,      // 每步踩踏伤害
+    "legSplashRange": 32,       // 踩踏范围 (~4格)
+    "allowLegStep": true,        // 可踩过建筑
+
+    "stepShake": 1.0,
+    "rippleScale": 1.0,
+
+    // --- 索敌 ---
+    "targetAir": false,
+    "targetGround": true,
+
+    // --- 武器: 双联分裂榴弹炮 ---
+    "weapons": [
+        {
+            "name": "my-collaris-weapon",
+            "x": 14,
+            "y": 3,
+            "mirror": true,          // 左右镜像 → 2门炮
+            "reload": 130,           // 130 tick 装填
+            "firstShotDelay": 156,   // 156 tick 初始冷却
+            "rotate": true,          // 炮塔独立旋转
+            "rotationSpeed": 0.4,
+            "shootCone": 30,         // 射击锥半角
+            "recoil": 4,
+            "shake": 3,
+            "shootSound": "shootBig",
+
+            // 开火时对自身施加 Slow (~2.18秒)
+            // 注: 若 Mindustry 版本不支持 shootStatus 字段，请用 JS 补充
+            "shootStatus": "slow",
+            "shootStatusDuration": 131,
+
+            "bullet": {
+                "type": "ArtilleryBulletType",
+                "speed": 5.5,            // ~41.25 tiles/sec
+                "damage": 195,
+                "lifetime": 60,           // 1秒
+                "splashDamage": 120,
+                "splashDamageRadius": 36, // ~4.5格
+                "collidesAir": false,
+                "collidesGround": true,
+                "hitShake": 5,
+
+                // 分裂弹: 15发追踪碎片
+                "fragBullets": 15,
+                "fragAngle": 130,
+                "fragLifeMin": 0.3,
+                "fragLifeMax": 1.0,
+                "fragVelMin": 0.5,
+                "fragVelMax": 1.0,
+                "fragBullet": {
+                    "type": "BasicBulletType",
+                    "speed": 5.5,
+                    "damage": 37,
+                    "lifetime": 40,
+                    "splashDamage": 35,
+                    "splashDamageRadius": 30, // ~3.7格
+                    "pierceCap": 2,            // 穿透2次
+                    "homingPower": 0.09,
+                    "homingRange": 150,        // ~18.75格
+                    "collidesAir": false,
+                    "collidesGround": true
+                }
+            }
+        }
+    ]
+}
