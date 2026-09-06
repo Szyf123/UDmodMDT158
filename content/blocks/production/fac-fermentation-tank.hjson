@@ -1,26 +1,25 @@
 {
     "type": "GenericCrafter",
-    "name": "酵化罐",         // 游戏内显示的名称
-    "description": "发酵海藻生产环氧胶",     // 建筑描述
-    "size": 2,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "name": "fac-fermentation-tank",
+    "localizedName": "酵化罐",
+    "description": "发酵海藻生产环氧胶",
+    "size": 2,
+    "health": 1,
+    "rotate": false,
 
-    "hasLiquids": true,
-    "itemCapacity": 10,
-    "liquidCapacity": 30,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "tuberculosis/1",
+        "seaweed-bundle/1",
+        "aurum/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-packor",
+        "objectives": ["tuberculosis","seaweed-bundle","aurum"]
+    },
 
-    // --- 生产效率 ---
-    "craftTime": 60,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 60,
     "consumes": {
         "items": [
             { "item": "seaweed-bundle", "amount": 2 }
@@ -30,7 +29,6 @@
         ],
         "power": 1.5
     },
-    // --- 产出配置 (产出两种液体) ---
     "outputLiquids": [
         {
             "liquid": "epoxy-glue",
@@ -38,13 +36,17 @@
         }
     ],
 
+    "hasLiquids": true,
+    "itemCapacity": 10,
+    "liquidCapacity": 30,
+
+    "category": "crafting",
+
     "drawer": [
-        // 1. 绘制底座（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-bottom"
         },
-        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
         {
             "type": "DrawLiquidRegion",
             "drawLiquid": "epoxy-glue",
@@ -61,7 +63,6 @@
             "spinSprite": true,
             "rotateSpeed": 2.0
         },
-        // 3. 绘制顶层（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-top"

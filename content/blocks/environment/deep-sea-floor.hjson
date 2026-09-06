@@ -1,7 +1,10 @@
 {
     "type": "Floor",                // 类型为地板
-    "variants": 1,                // 可选，贴图变体数量，让地面看起来更自然
+    "variants": 4,                // 可选，贴图变体数量，让地面看起来更自然
     "attributes": {
         "deep-sea": 1.0
-    }
+    },
+
+    "status": "sta-overpressure",      // Floor 字段名是 status（非 statusEffect）
+    "statusDuration": 120               // 键名末尾不能有空格，否则被忽略
 }

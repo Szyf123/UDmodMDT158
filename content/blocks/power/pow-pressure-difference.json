@@ -1,0 +1,28 @@
+{
+    "type": "ConsumeGenerator",
+    "name": "pow-pressure-difference",
+    "localizedName": "压差发电机",
+    "description": "111",
+    "size": 1,
+    "health": 1,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone"]
+    },
+
+    "powerProduction": 0.1,
+    "effectChance": 0.01,
+    "generateEffect": "smoke",
+    "generateEffectRange": 1,
+
+    "hasItems": false,
+    "hasLiquids": false,
+
+    "category": "power"
+}

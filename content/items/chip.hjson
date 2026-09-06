@@ -1,7 +1,8 @@
 {
-  "name": "晶元",
-  "cost": 3,
-  "color": "FFB143",
-  "alwaysUnlocked": "false",
-  "research": "heavy-stone"
+    "name": "chip",
+    "localizedName": "晶元",
+    "cost": 3,
+    "color": "FFB143",
+    "alwaysUnlocked": false,
+    "research": "desiccant"
 }

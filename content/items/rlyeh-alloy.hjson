@@ -1,7 +1,8 @@
 {
-  "name": "深渊合金",
-  "cost": 9,
-  "color": "216AEB",
-  "alwaysUnlocked": "false",
-  "research": "heavy-stone"
+    "name": "rlyeh-alloy",
+    "localizedName": "深渊合金",
+    "cost": 9,
+    "color": "216AEB",
+    "alwaysUnlocked": false,
+    "research": "ceramic-steel"
 }

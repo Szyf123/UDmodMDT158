@@ -1,0 +1,46 @@
+{
+    "type": "ConsumeGenerator",
+    "name": "pow-seaweed-burner",
+    "localizedName": "海藻燃烧器",
+    "description": "111",
+    "size": 2,
+    "health": 1,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "pow-pressure-difference",
+        "objectives": ["heavy-stone"]
+    },
+
+    "itemDuration": 70,
+    "consumes": {
+        "items": {
+            "items": [
+                { "item": "seaweed-bundle", "amount": 1 }
+            ]
+        },
+        "liquid": {
+            "liquid": "fresh-water",
+            "amount": 0.12
+        }
+    },
+    "powerProduction": 3,
+    "generateEffectRange": 0.8,
+    "consumeEffect": "smoke",
+
+    "drawer": [
+        { "type": "DrawDefault" },
+        { "type": "DrawLiquidRegion", "drawLiquid": "fresh-water", "suffix": "-liquid-fresh-water" }
+    ],
+
+    "hasItems": true,
+    "hasLiquids": true,
+    "itemCapacity": 10,
+    "liquidCapacity": 20,
+
+    "category": "power",
+}

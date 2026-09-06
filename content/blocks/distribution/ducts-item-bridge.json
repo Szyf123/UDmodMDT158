@@ -1,0 +1,25 @@
+{
+    "type": "ItemBridge",
+    "name": "ducts-item-bridge",
+    "localizedName": "密封管道桥",
+    "description": "111",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-item-basic",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "distribution",
+
+    "range": 6,
+    "itemCapacity": 10,
+    "transportTime": 4.5,
+    "hasPower": false
+}

@@ -1,0 +1,47 @@
+{
+    "type": "Drill",
+    "name": "dri-precise",
+    "localizedName": "精密钻头",
+    "description": "消耗电力和酸液采掘钯",
+
+    "size": 3,
+    "health": 480,
+    "itemCapacity": 30,
+    "hasLiquids": false,
+
+    "requirements": [
+        "ceramic-steel/60",
+        "pressure-resistant-glass/65",
+        "advanced-chip/30"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "dri-electrical",
+        "objectives": ["ceramic-steel","pressure-resistant-glass","advanced-chip"]
+    },
+
+    "category": "production",
+
+    "tier": 2,
+    "drillTime": 820,
+    "liquidBoostIntensity": 1,
+
+    "drillMultipliers": {
+        "quartz-sand": 3.52,   // 铜的效率是 2 倍
+        "heavy-stone": 3.52,  // 钛的效率是 0.5 倍
+        "tuberculosis": 2.02  // 钛的效率是 0.5 倍
+    },
+
+    "consumes": {
+        "power": 2.25,
+        "liquid": {
+            "liquid": "acid-solution",
+            "amount": 0.05,
+        }
+    },
+
+    "blockedItems": [
+        "seaweed-bundle"
+    ]
+}

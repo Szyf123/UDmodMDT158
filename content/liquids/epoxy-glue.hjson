@@ -1,16 +1,22 @@
 {
-    "name": "环氧胶",
+    "type": "CellLiquid",
+    "name": "epoxy-glue",
+    "localizedName": "环氧胶",
 
     "color": "FFE46FFF",
-    "lightColor": "FFE46F25",
+    "colorFrom": "FFF9DF",
+    "colorTo": "E0CA37",
+    "cells": 6,
+
+    "maxSpread": 0.75,
+    "spreadDamage": 0,
 
     "temperature": 0.5,
     "heatCapacity": 0.3,
     "viscosity": 0.9,
 
-    "gas": "false",
-    "gasColor": "FFFFFFFF",
+    "gas": false,
 
-    "alwaysUnlocked": "false",
-    "research": "under-water-small-core"
+    "alwaysUnlocked": false,
+    "research": "fresh-water"
 }

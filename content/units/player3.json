@@ -1,0 +1,61 @@
+{
+    "type": "payload",
+    "name": "player3",
+    "localizedName": "神经元",
+    "description": "三型核心机",
+    "health": 100,
+    "speed": 4.0,
+    "hitSize": 20,
+    "armor": 0,
+
+    "mineTier": 0,
+    "mineSpeed": 2.0,
+    "itemCapacity": 100,
+    "buildSpeed": 2,
+
+    "payloadCapacity": 576,
+    "pickupUnits": false,
+
+    "flying": true,
+    "accel": 0.05,
+    "drag": 0.02,
+    "rotateSpeed": 5.0,
+
+    "engines": [
+        {"x": -7, "y": -5, "radius": 1.2, "rotation": -90},
+        {"x": 0, "y": -8, "radius": 2.8, "rotation": -90},
+        {"x": 7, "y": -5, "radius": 1.2, "rotation": -90}
+    ],
+    "engineSize": 0,
+    "engineColor": "4DABD1",
+    "abilities": [
+        {"type": "MoveEffectAbility", "x": -7, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 1.5, "interval": 3},
+        {"type": "MoveEffectAbility", "x": 0, "y": -8, "effect": "missileTrail", "color": "4DABD1", "effectParam": 2.0, "interval": 3},
+        {"type": "MoveEffectAbility", "x": 7, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 1.5, "interval": 3}
+    ],
+
+    "targetAir": true,
+    "targetGround": true,
+
+    "weapons": [
+        {
+            "name": "player-lightning-turret-gun",
+            "mirror": false,
+            "x": 0,
+            "y": 2,
+            "reload": 10,
+            "shootSound": "laser",
+            "rotateSpeed": 3.0,
+            "rotate": true,
+            "bullet": {
+                "type": "LightningBulletType",
+                "damage": 15,
+                "lightningLength": 8,
+                "lightningDamage": 10,
+                "lightningColor": "4DABD1",
+                "fromColor": "FFFFFF",
+                "toColor": "4DABD1"
+            }
+        }
+    ]
+}

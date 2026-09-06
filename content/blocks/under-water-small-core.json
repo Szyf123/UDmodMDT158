@@ -5,16 +5,27 @@
     "size": 3,
     "health": 1200,
     "itemCapacity": 4000,
-    "tier": 1,
+
     "requirements": [
         "heavy-stone/1200",
         "quartz-sand/600"
     ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "root": true,
+        "planet": "rlyeh-planet",
+        "name": "拉莱耶"
+    },
+
     "category": "effect",
-    "research": "planetaryTerminal",
+
+    "tier": 1,
+    "alwaysUnlocked": true,
     "buildVisibility": "shown",
-    "allowSpawn": "true",
-    "requiresCoreZone": "false",
-    "unitType": "player1",
-    "shownPlanets": ["rlyeh-planet"]
+    "shownPlanets": ["rlyeh-planet"],
+    "allowSpawn": true,
+    "requiresCoreZone": false,
+    "unitCapModifier": 10,
+    "unitType": "player1"
 }

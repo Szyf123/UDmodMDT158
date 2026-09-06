@@ -1,0 +1,31 @@
+{
+    "type": "Drill",
+    "name": "dri-hydraulic",
+    "localizedName": "液压钻头",
+    "description": "利用深海水压采掘基础矿石",
+
+    "size": 2,
+    "health": 80,
+    "itemCapacity": 10,
+    "hasLiquids": false,
+
+    "requirements": [
+        "heavy-stone/15",
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "dri-harvester",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "production",
+
+    "tier": 0,
+    "drillTime": 280,
+    "liquidBoostIntensity": 1,
+
+    "blockedItems": [
+        "seaweed-bundle"
+    ]
+}

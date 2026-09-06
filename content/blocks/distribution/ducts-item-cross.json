@@ -1,0 +1,23 @@
+{
+    "type": "Junction",
+    "name": "ducts-item-cross",
+    "localizedName": "密封交叉器",
+    "description": "111",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-item-basic",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "distribution",
+
+    "capacity": 4,
+    "speed": 28
+}

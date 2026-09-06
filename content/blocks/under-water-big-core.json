@@ -3,18 +3,30 @@
     "name": "under-water-big-core",
     "localizedName": "鲸落",
     "size": 5,
-    "health": 600,
-    "itemCapacity": 600,
-    "tier": 3,
+    "health": 7200,
+    "itemCapacity": 20000,
+
     "requirements": [
-        "lead/30",
-        "copper/30",
-        "silicon/20"
+        "ceramic-steel/4000",
+        "desiccant/2000",
+        "advanced-chip/1600",
+        "pressure-resistant-glass/1200"
     ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-middle-core",
+        "objectives": ["ceramic-steel","desiccant","advanced-chip", "pressure-resistant-glass"]
+    }
+
     "category": "effect",
-    "research": "planetaryTerminal",
+
+    "tier": 3,
+    "alwaysUnlocked": false,
     "buildVisibility": "shown",
-    "allowSpawn": "true",
-    "requiresCoreZone": "false",
-    "shownPlanets": ["rlyeh-planet"]
+    "shownPlanets": ["rlyeh-planet"],
+    "allowSpawn": true,
+    "requiresCoreZone": false,
+    "unitCapModifier": 24,
+    "unitType": "player3"
 }

@@ -1,0 +1,11 @@
+{
+    "name": "sta-overpressure",
+    "localizedName": "超压",
+    "description": "受到来自深渊的重压",
+
+    "color": "5471F7",
+
+    "damage": 1.2,
+    "speedMultiplier": 0.5,
+    "healthMultiplier": 0.85
+}

@@ -1,0 +1,26 @@
+{
+    "type": "Duct",
+    "name": "duct-item-advanced",
+    "localizedName": "承压管道",
+    "description": "利用气压差的水下物品运输设备，负压夹吸~",
+    "size": 1,
+    "health": 120,
+
+    "requirements": [
+        "tuberculosis/2",
+        "pressure-resistant-glass/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-item-basic",
+        "objectives": ["tuberculosis","pressure-resistant-glass"]
+    },
+
+    "category": "distribution",
+
+    "itemCapacity": 3,
+    "speed": 4.6,
+    "bridgeReplacement": "ducts-item-bridge",
+    "junctionReplacement": "ducts-item-cross"
+}

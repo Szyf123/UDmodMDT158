@@ -1,41 +1,21 @@
 {
-    // 内容类型：预设区块
-    "type": "SectorPreset",
-
-    // 内部名称（必须与地图文件名一致，即 maps/rlyeh-landing.msav）
     "name": "rlyeh-landing",
+    "localizedName": "拉莱耶入水点",
+    "description": "潜入深渊的第一个落脚点。",
 
-    // 游戏中显示的名称
-    "localizedName": "拉莱耶登陆点",
-    "description": "在深渊中的第一个落脚点。",
-
-    // 所属星球（引用 rlyeh-planet.hjson 中定义的 name）
     "planet": "rlyeh-planet",
-
-    // 区块编号（必须与 rlyeh-planet.hjson 中的 startSector 一致）
     "sector": 0,
-
-    // 难度（0-10）
     "difficulty": 1,
-
-    // 始终解锁（起始区块无需研究即可登陆）
-    "alwaysUnlocked": true,
-
-    // 不需要解锁即可登陆
-    "requireUnlock": false,
-
-    // 允许玩家选择发射时携带的资源
-    "allowLaunchLoadout": false,
-
-    // 是否允许玩家自定义发射蓝图
-    "allowLaunchSchematics": false,
-
-    // 捕获波数（0 = 无需守波即占领）
-    "captureWave": 0,
-
-    // 是否为最后一个区块（战役结局）
     "isLastSector": false,
 
-    // 是否禁用昼夜光照
+    "alwaysUnlocked": false,
+    "research": "planetaryTerminal",
+    "requireUnlock": true,
+
+    "allowLaunchLoadout": false,
+    "allowLaunchSchematics": false,
+
+    "captureWave": 0,
+
     "noLighting": false
 }

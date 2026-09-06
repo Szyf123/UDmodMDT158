@@ -1,29 +1,26 @@
 {
     "type": "AttributeCrafter",
-    "name": "高压窑炉",         // 游戏内显示的名称
-    "description": "将石英砂烧炼成玻璃",     // 建筑描述
-    "size": 3,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "name": "fac-pressed-glass-kiln",
+    "localizedName": "高压窑炉",
+    "description": "将石英砂烧炼成玻璃",
+    "size": 3,
+    "health": 1,
+    "rotate": false,
 
-    "itemCapacity": 20,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "ceramic-steel/1",
+        "chip/1",
+        "palladium/1",
+        "pressure-resistant-glass/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-glass-kiln",
+        "objectives": ["ceramic-steel","chip","palladium","pressure-resistant-glass"]
+    },
 
-    "attribute": "deep-sea",   // 这里依赖深海属性
-    "baseEfficiency": 0.65,
-    "boostScale": 0.15,
-    "maxBoost": 1.35,
-
-    // --- 生产效率 ---
-    "craftTime": 100,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 100,
     "consumes": {
         "items": [
             { "item": "quartz-sand", "amount": 5 },
@@ -31,15 +28,22 @@
         ],
         "power": 4
     },
-    // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "pressure-resistant-glass",
             "amount": 7
         }
     ],
-
     "craftEffect": "smeltsmoke",
+
+    "attribute": "deep-sea",
+    "baseEfficiency": 0.65,
+    "boostScale": 0.15,
+    "maxBoost": 1.35,
+
+    "itemCapacity": 20,
+
+    "category": "crafting",
 
     "drawer": [
         {

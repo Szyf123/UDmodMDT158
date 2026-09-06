@@ -1,0 +1,38 @@
+{
+  "type": "flying",
+  "name": "my-test-weap-unit",
+  "localizedName": "武器测试载体",
+  "health": 100,
+  "hitSize": 1,
+  "research": "core-shard",
+
+  "flying": true,
+  "wobble": false,
+
+  "weapons": [
+        {
+            "name": "ring-alpha-main-weapon",
+            "x": 12,
+            "y": 0,
+            "mirror": false,
+            "rotate": true,
+            "reload": 48,
+            "shake": 0.6,
+            "inaccuracy": 2,
+            "showBase": false,
+            "shoot": {
+                "shots": 2
+            },
+            "bullet": {
+                "type": "LaserBulletType",
+                "damage": 10,
+                "length": 140,
+                "width": 6,
+                "lifetime": 12,
+                "color": "#20ff00",
+                "buildAbsorb": true,
+                "buildAbsorbMultiplier": 0.055
+            }
+        }
+  ]
+}

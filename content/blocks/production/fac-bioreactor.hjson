@@ -1,27 +1,26 @@
 {
     "type": "GenericCrafter",
-    "name": "fac-bioreactor",         // 游戏内显示的名称
+    "name": "fac-bioreactor",
     "localizedName": "生物反应器",
-    "description": "环氧胶与钯反应生产凝胶体",     // 建筑描述
-    "size": 3,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "description": "环氧胶与钯反应生产凝胶体",
+    "size": 3,
+    "health": 1,
+    "rotate": false,
 
-    "hasLiquids": true,
-    "itemCapacity": 20,
-    "liquidCapacity": 30,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "heavy-stone/1",
+        "ceramic-steel/1",
+        "pressure-resistant-glass/1",
+        "advanced-chip/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-fermentation-tank",
+        "objectives": ["heavy-stone","ceramic-steel","pressure-resistant-glass","advanced-chip"]
+    },
 
-    // --- 生产效率 ---
-    "craftTime": 96,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 96,
     "consumes": {
         "items": [
             { "item": "palladium", "amount": 2 }
@@ -32,7 +31,6 @@
         ],
         "power": 3.2
     },
-    // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "palladium-colloid",
@@ -40,13 +38,17 @@
         }
     ],
 
+    "hasLiquids": true,
+    "itemCapacity": 20,
+    "liquidCapacity": 30,
+
+    "category": "crafting",
+
     "drawer": [
-        // 1. 绘制底座（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-bottom"
         },
-        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
         {
             "type": "DrawLiquidRegion",
             "drawLiquid": "epoxy-glue",
@@ -69,7 +71,6 @@
             "spinSprite": true,
             "rotateSpeed": -2.0
         },
-        // 3. 绘制顶层（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-top"

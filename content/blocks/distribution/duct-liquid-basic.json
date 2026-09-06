@@ -1,0 +1,23 @@
+{
+    "type": "Conduit",
+    "name": "duct-liquid-basic",
+    "localizedName": "液体管道",
+    "description": "111",
+    "size": 1,
+    "health": 1,
+    
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "liquid",
+
+    "liquidCapacity": 15,
+    "bridgeReplacement": "ducts-liquid-bridge"
+}

@@ -1,0 +1,20 @@
+{
+    "type": "LiquidRouter",
+    "name": "ducts-liquid-router",
+    "localizedName": "液体路由器",
+    "description": "111",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/2"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-liquid-basic",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "liquid"
+}

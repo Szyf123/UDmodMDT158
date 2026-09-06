@@ -1,0 +1,7 @@
+{
+    "type": "StaticWall",
+    "name": "sea-cliff-ru-a",
+    "localizedName": "海底悬崖-ru-a",
+    "variants": 0,
+    "hasShadow": false
+}

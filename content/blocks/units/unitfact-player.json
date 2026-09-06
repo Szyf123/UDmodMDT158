@@ -1,0 +1,47 @@
+{
+    "type": "UnitFactory",
+    "name": "unitfact-player",
+    "localizedName": "核心机工厂",
+    "description": "111",
+    "size": 3,
+    "health": 600,
+    "category": "units",
+
+    "requirements": [
+        "heavy-stone/1",
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone"]
+    }
+
+    "consumes": {
+        "power": 2.5
+    },
+
+    "plans": [
+        {
+            "unit": "player1",
+            "time": 300,
+            "requirements": [
+                "heavy-stone/1"
+            ]
+        },
+        {
+            "unit": "player2",
+            "time": 300,
+            "requirements": [
+                "heavy-stone/1"
+            ]
+        },
+        {
+            "unit": "player3",
+            "time": 300,
+            "requirements": [
+                "heavy-stone/1"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "type": "Drill",
+    "name": "dri-harvester",
+    "localizedName": "收割机",
+    "description": "采收海底的海藻束",
+
+    "size": 2,
+    "health": 50,
+    "itemCapacity": 10,
+    "hasLiquids": false,
+
+    "requirements": [
+        "heavy-stone/20",
+        "quartz-sand/5"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone","quartz-sand"]
+    },
+
+    "category": "production",
+
+    "tier": 0,
+    "drillTime": 700,
+    "liquidBoostIntensity": 1,
+
+    "blockedItems": [
+        "quartz-sand",
+        "heavy-stone"
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "type": "Reconstructor",
+    "name": "unitfact-reconstructor-treadmill1",
+    "localizedName": "步行机一级重构工厂",
+    "description": "111",
+    "size": 5,
+    "health": 600,
+    "category": "units",
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "unitfact-treadmill",
+        "objectives": ["heavy-stone"]
+    },
+
+    "constructTime": 300,
+
+    "consumes": {
+        "power": 2.5,
+        "items": {
+            "items": [
+                { "item": "heavy-stone", "amount": 1 }
+            ]
+        }
+    },
+
+    "upgrades": [
+        ["treadmill-alpha", "treadmill-beta"]
+    ]
+}

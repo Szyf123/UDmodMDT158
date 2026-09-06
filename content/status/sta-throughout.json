@@ -1,0 +1,11 @@
+{
+    "name": "sta-throughout",
+    "localizedName": "洞穿",
+    "description": "洞穿目标，破坏其水密性",
+
+    "color": "ff6100",
+
+    "damage": 0.1,
+    "speedMultiplier": 0.7,
+    "reloadMultiplier": 0.9
+}

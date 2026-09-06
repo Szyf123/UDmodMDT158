@@ -1,0 +1,21 @@
+{
+    "type": "PowerNode",
+    "name": "pow-powernode-basic",
+    "localizedName": "基础电力节点",
+    "description": "在水中传输电力",
+    "health": 40,
+    "size": 1,
+    "category": "power",
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+    "research": {
+        "parent": "pow-pressure-difference",
+        "objectives": ["heavy-stone"]
+    },
+
+    "laserRange": 8,
+    "maxNodes": 10
+}

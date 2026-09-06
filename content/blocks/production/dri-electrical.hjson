@@ -1,0 +1,37 @@
+{
+    "type": "Drill",
+    "name": "dri-electrical",
+    "localizedName": "电气钻头",
+    "description": "消耗电力采掘结核矿",
+
+    "size": 2,
+    "health": 200,
+    "itemCapacity": 20,
+    "hasLiquids": false,
+
+    "requirements": [
+        "heavy-stone/100",
+        "pressure-resistant-glass/50",
+        "chip/25"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "dri-hydraulic",
+        "objectives": ["heavy-stone","pressure-resistant-glass","chip"]
+    },
+
+    "category": "production",
+
+    "tier": 1,
+    "drillTime": 200,
+    "liquidBoostIntensity": 1,
+
+    "consumes": {
+        "power": 1.0
+    },
+
+    "blockedItems": [
+        "seaweed-bundle"
+    ]
+}

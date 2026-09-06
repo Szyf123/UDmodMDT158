@@ -1,46 +1,53 @@
 {
-    "type": "flying",
+    "type": "payload",
     "name": "player1",
     "localizedName": "原核",
-
-    "trailLength": 3,          // 尾迹的长度（帧数），数值越大尾巴越长[reference:2]
-    "trailColor": "85E4FC",     // 尾迹的颜色，这里用了和闪电一样的亮蓝色
-    "trailWidth": 0.6,
-
-    "health": 200,
+    "description": "一型核心机",
+    "health": 30,
     "speed": 4.0,
     "hitSize": 8,
     "armor": 0,
+
+    "mineTier": 0,
+    "mineSpeed": 1.0,
+    "itemCapacity": 20,
+    "buildSpeed": 0.6,
+
+    "payloadCapacity": 64,
+    "pickupUnits": false,
 
     "flying": true,
     "accel": 0.05,
     "drag": 0.02,
     "rotateSpeed": 3.0,
 
-    "mineTier": 0,
-    "mineSpeed": 1.0,
-    "itemCapacity": 20,
-    "buildSpeed": 0.2,
+    "engineColor": "4DABD1",
+    "engineOffset": 6,
+    "abilities": [
+        {"type": "MoveEffectAbility", "x": 0, "y": -4, "effect": "missileTrail", "color": "4DABD1", "effectParam": 1.5, "interval": 3}
+    ],
+
+    "targetAir": true,
+    "targetGround": true,
 
     "weapons": [
         {
-            // 武器名必须与精灵图一致：player1-lightning-turret-gun.png
-            "name": "player1-lightning-turret-gun",
+            "name": "player-lightning-turret-gun",
             "mirror": false,
             "x": 0,
-            "y": 2,
+            "y": 1,
             "reload": 20,
             "shootSound": "laser",
             "rotateSpeed": 3.0,
-            "rotate": "true",
+            "rotate": true,
             "bullet": {
                 "type": "LightningBulletType",
                 "damage": 15,
                 "lightningLength": 8,
                 "lightningDamage": 10,
-                "lightningColor": "83D4FF",
+                "lightningColor": "4DABD1",
                 "fromColor": "FFFFFF",
-                "toColor": "83D4FF"
+                "toColor": "4DABD1"
             }
         }
     ]

@@ -1,27 +1,24 @@
 {
     "type": "GenericCrafter",
-    "name": "fac-desiccant-release",         // 游戏内显示的名称
+    "name": "fac-desiccant-release",
     "localizedName": "干燥剂释出机",
-    "description": "从重质岩中提取干燥剂",     // 建筑描述
-    "size": 2,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "description": "从重质岩中提取干燥剂",
+    "size": 2,
+    "health": 1,
+    "rotate": false,
 
-    "hasLiquids": true,
-    "itemCapacity": 10,
-    "liquidCapacity": 30,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "heavy-stone/1",
+        "pressure-resistant-glass/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-Ionization",
+        "objectives": ["heavy-stone","pressure-resistant-glass"]
+    },
 
-    // --- 生产效率 ---
-    "craftTime": 60,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 60,
     "consumes": {
         "items": [
             { "item": "heavy-stone", "amount": 3 }
@@ -31,23 +28,25 @@
         ],
         "power": 1.5
     }
-    // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "desiccant",
             "amount": 2
         }
     ],
-
     "craftEffect": "pulverizeMedium",
 
+    "hasLiquids": true,
+    "itemCapacity": 10,
+    "liquidCapacity": 30,
+
+    "category": "crafting",
+
     "drawer": [
-        // 1. 绘制底座（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-bottom"
         },
-        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
         {
             "type": "DrawLiquidRegion",
             "drawLiquid": "acid-solution",
@@ -59,7 +58,6 @@
             "spinSprite": true,
             "rotateSpeed": 2.0
         },
-        // 3. 绘制顶层（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-top"

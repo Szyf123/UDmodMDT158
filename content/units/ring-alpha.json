@@ -1,0 +1,88 @@
+{
+    "type": "flying",
+    "name": "ring-alpha",
+    "localizedName": "鱿鱼",
+    "health": 100,
+    "hitSize": 20,
+    "research": "core-shard",
+
+    "flying": true,
+    "buildSpeed": 0.4,
+
+    "engineSize": 5,
+    "engineOffset": 0,
+
+    "parts": [
+    {
+        "type": "RegionPart",
+        "name": "ud-mod-ring-alpha-spinner",
+        "outline": false,
+        "layer": 114,
+        "progress": "time",
+        "clampProgress": false,
+        "moveRot": 1.0,
+        "x": 0,
+        "y": 0
+    }
+    ],
+    "weapons": [
+        {
+            "name": "ring-alpha-main-weapon",
+            "x": 8,
+            "y": 8,
+            "mirror": true,
+            "rotate": true,
+            "reload": 30,
+            "inaccuracy": 2,
+            "bullet": {
+                "type": "BasicBulletType",
+                "sprite": "ud-mod-ring-alpha-main-weapon-bullet",
+                "speed": 9,
+                "damage": 15,
+                "width": 8,
+                "height": 14,
+                "shrinkY": 0.4,
+                "lifetime": 16,
+                "hitSize": 8,
+                "frontColor": "FFFFFF",
+                "backColor": "18E070",
+                "hitColor": "18E070",
+                "collidesTeam": true,
+                "healAmount": 60,
+                "healColor": "18E070",
+                "healEffect": "healBlockFull",
+                "shootEffect": "pointHit",
+                "hitEffect": "pointHit"
+            }
+        },
+        {
+            "name": "ring-alpha-main-weapon",
+            "x": 8,
+            "y": -8,
+            "mirror": true,
+            "rotate": true,
+            "reload": 24,
+            "inaccuracy": 2,
+            "bullet": {
+                "type": "BasicBulletType",
+                "sprite": "ud-mod-ring-alpha-main-weapon-bullet",
+                "speed": 9,
+                "damage": 15,
+                "width": 8,
+                "height": 14,
+                "shrinkY": 0.4,
+                "lifetime": 16,
+                "hitSize": 8,
+                "frontColor": "FFFFFF",
+                "backColor": "18E070",
+                "hitColor": "18E070",
+                "collidesTeam": true,
+                "healAmount": 60,
+                "healColor": "18E070",
+                "healEffect": "healBlockFull",
+                "shootEffect": "pointHit",
+                "hitEffect": "pointHit"
+            }
+        }
+    ]
+}

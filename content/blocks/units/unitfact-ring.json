@@ -1,0 +1,33 @@
+{
+    "type": "UnitFactory",
+    "name": "unitfact-ring",
+    "localizedName": "环体工厂",
+    "description": "111",
+    "size": 3,
+    "health": 600,
+    "category": "units",
+
+    "requirements": [
+        "heavy-stone/1",
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone"]
+    }
+
+    "consumes": {
+        "power": 2.5
+    },
+
+    "plans": [
+        {
+            "unit": "ring-alpha",
+            "time": 300,
+            "requirements": [
+                "heavy-stone/1"
+            ]
+        }
+    ]
+}

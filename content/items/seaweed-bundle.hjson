@@ -1,8 +1,10 @@
 {
-  "name": "海藻束",
-  "hardness": 1,
-  "cost": 0,
-  "color": "5AA12E",
-  "alwaysUnlocked": "false",
-  "research": "heavy-stone"
+    "name": "seaweed-bundle",
+    "localizedName": "海藻束",
+    "cost": 1,
+    "color": "5AA12E",
+    "alwaysUnlocked": false,
+    "research": "heavy-stone",
+
+    "hardness": 0
 }

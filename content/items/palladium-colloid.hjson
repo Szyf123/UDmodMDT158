@@ -1,7 +1,8 @@
 {
-  "name": "钯凝胶体",
-  "cost": 5,
-  "color": "75BDED",
-  "alwaysUnlocked": "false",
-  "research": "heavy-stone"
+    "name": "palladium-colloid",
+    "localizedName": "钯凝胶体",
+    "cost": 5,
+    "color": "75BDED",
+    "alwaysUnlocked": false,
+    "research": "palladium"
 }

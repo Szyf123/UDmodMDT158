@@ -1,0 +1,25 @@
+{
+    "type": "DuctRouter",
+    "name": "ducts-item-router",
+    "localizedName": "密封分流器",
+    "description": "111",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-item-basic",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "distribution",
+
+    "speed": 4.5,
+    "configurable": false,
+    "saveConfig": false,
+    "clearOnDoubleTap": false
+}

@@ -1,59 +1,58 @@
 {
     "type": "GenericCrafter",
-    "name": "fac-compressor",         // 内部标识符，必须与贴图文件名前缀一致
+    "name": "fac-compressor",
     "localizedName": "陶钢压缩机",
-    "description": "用结核矿生产硬质陶刚",     // 建筑描述
-    "size": 3,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "description": "用结核矿生产硬质陶刚",
+    "health": 1,
+    "size": 3,
+    "rotate": false,
 
-    "hasLiquids": true,
-    "itemCapacity": 30,
-    "liquidCapacity": 40,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "heavy-stone/1"
+        "tuberculosis/1"
+        "desiccant/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-etching",
+        "objectives": ["heavy-stone","tuberculosis","desiccant"]
+    },
 
-    // --- 生产效率 ---
-    "craftTime": 75,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 75,
     "consumes": {
         "items": [
-            { "item": "tuberculosis", "amount": 1 }
+            { "item": "tuberculosis", "amount": 2 }
         ],
         "liquids": [
             { "liquid": "fresh-water", "amount": 0.2 }
         ],
         "power": 2.5
     },
-    // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "ceramic-steel",
             "amount": 1
         }
     ],
-
     "craftEffect": "pulverizeMedium",
 
+    "hasLiquids": true,
+    "itemCapacity": 30,
+    "liquidCapacity": 40,
+
+    "category": "crafting",
+
     "drawer": [
-        // 1. 绘制底座（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-bottom"
         },
-        // 2. 绘制液体（每种液体单独显示，透明度跟随液体储量）
         {
             "type": "DrawLiquidRegion",
             "drawLiquid": "fresh-water",
             "suffix": "-liquid-fresh-water"
         },
-        // 3. 绘制顶层（不旋转）
         {
             "type": "DrawRegion",
             "suffix": "-top"

@@ -1,8 +1,10 @@
 {
-  "name": "结核矿",
-  "hardness": 2,
-  "cost": 4,
-  "color": "1F1F1F",
-  "alwaysUnlocked": "false",
-  "research": "heavy-stone"
+    "name": "tuberculosis",
+    "localizedName": "结核矿",
+    "cost": 3,
+    "color": "1F1F1F",
+    "alwaysUnlocked": false,
+    "research": "chip",
+
+    "hardness": 1
 }

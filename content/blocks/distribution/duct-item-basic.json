@@ -1,0 +1,26 @@
+{
+    "type": "Duct",
+    "name": "duct-item-basic",
+    "localizedName": "密封管道",
+    "description": "基础的水下物品运输设备，杂鱼~杂鱼~",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/2",
+        "quartz-sand/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "under-water-small-core",
+        "objectives": ["heavy-stone","quartz-sand"]
+    },
+
+    "category": "distribution",
+
+    "itemCapacity": 3,
+    "speed": 8.3,
+    "bridgeReplacement": "ducts-item-bridge",
+    "junctionReplacement": "ducts-item-cross"
+}

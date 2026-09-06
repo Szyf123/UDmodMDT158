@@ -1,39 +1,41 @@
 {
     "type": "GenericCrafter",
-    "name": "玻璃窑",         // 游戏内显示的名称
+    "name": "fac-glass-kiln",         // 游戏内显示的名称
+    "localizedName": "玻璃窑",
     "description": "将石英砂烧炼成玻璃",     // 建筑描述
     "size": 2,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "health": 1,
+    "rotate": false,
 
-    "itemCapacity": 10,
-
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "heavy-stone/1",
+        "quartz-sand/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "fac-Ionization",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-Ionization",
+        "objectives": ["heavy-stone","quartz-sand"]
+    },
 
-    // --- 生产效率 ---
-    "craftTime": 45,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
+    "craftTime": 45,
     "consumes": {
         "items": [
             { "item": "quartz-sand", "amount": 2 }
         ],
         "power": 2
     },
-    // --- 产出配置 (产出两种液体) ---
     "outputItems": [
         {
             "item": "pressure-resistant-glass",
             "amount": 2
         }
     ],
-    
     "craftEffect": "smeltsmoke",
+
+    "itemCapacity": 10,
+
+    "category": "crafting",
 
     "drawer": [
         {

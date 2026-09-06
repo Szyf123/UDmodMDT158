@@ -1,0 +1,39 @@
+{
+    "type": "ParticleWeather",
+    "name": "wea-under-water",
+    "localizedName": "水下",
+    "description": "用于模拟水下环境",
+
+    "drawNoise": true,
+    "noiseLayers": 2,
+    "noiseLayerSclM": 0.6,
+    "noiseLayerAlphaM": 0.7,
+    "noiseLayerSpeedM": 2.0,
+    "noiseScale": 2400,
+    "noisePath": "noiseAlpha",
+    "noiseColor": "cff8ff",
+
+    "drawParticles": true,
+    "particleRegion": "circle-shadow",
+    "color": "dfefff",
+    "sizeMin": 2.0,
+    "sizeMax": 7.0,
+    "minAlpha": 0.25,
+    "maxAlpha": 0.6,
+    "density": 1500,
+    "sinSclMin": 40,
+    "sinSclMax": 90,
+    "sinMagMin": 0.5,
+    "sinMagMax": 3.0,
+    "randomParticleRotation": false,
+    "force": 0,
+    "padding": 16,
+
+    "baseSpeed": 0.15,
+    "useWindVector": false,
+    "xspeed": 0.3,
+    "yspeed": 1,
+
+    "opacityMultiplier": 0.4,
+    "duration": 54000
+}

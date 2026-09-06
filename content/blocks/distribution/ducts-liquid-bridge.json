@@ -1,0 +1,24 @@
+{
+    "type": "LiquidBridge",
+    "name": "ducts-liquid-bridge",
+    "localizedName": "液体管道桥",
+    "description": "跨越障碍输送液体的桥梁装置。",
+    "size": 1,
+    "health": 40,
+
+    "requirements": [
+        "heavy-stone/1"
+    ],
+    "researchCostMultiplier": 1,
+
+    "research": {
+        "parent": "duct-liquid-basic",
+        "objectives": ["heavy-stone"]
+    },
+
+    "category": "liquid",
+
+    "range": 6,
+    "transportTime": 0.5,
+    "hasPower": false
+}

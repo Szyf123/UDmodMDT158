@@ -1,34 +1,37 @@
 {
     "type": "Separator",
-    "name": "滤选机",         // 游戏内显示的名称
-    "description": "从海水中提取物质",     // 建筑描述
-    "size": 2,                              // 建筑尺寸，3x3
-    "rotate": "false",
+    "name": "fac-filteror",
+    "localizedName": "滤选机",
+    "description": "从海水中提取物质",
+    "size": 2,
+    "health": 1,
+    "rotate": false,
 
-    // --- 建造需求 ---
     "requirements": [
-        "copper/100",
-        "lead/80"        // 用你模组里的材料或原版材料
+        "heavy-stone/1",
+        "chip/1"
     ],
-    "category": "crafting",                 // 在“制造”分类下
-    "research": "heavy-stone",              // 科技树前置
+    "researchCostMultiplier": 1,
+    
+    "research": {
+        "parent": "fac-etching",
+        "objectives": ["heavy-stone","chip"]
+    },
+
+    "craftTime": 160,
+    "consumes": {
+        "power": 4.5
+    },
+    "results": [
+        {"item": "heavy-stone", "amount": 5},
+        {"item": "quartz-sand", "amount": 9},
+        {"item": "aurum", "amount": 2},
+        {"item": "palladium", "amount": 1}
+    ],
 
     "hasLiquids": false,
 
-    // --- 生产效率 ---
-    "craftTime": 20,                        // 每生产一轮所需时间（单位：tick，60 tick = 1秒）
-
-    // --- 消耗配置 (只消耗电力) ---
-    "consumes": {
-        "power": 1.75                       // 持续耗电功率[reference:3]
-    },
-    // --- 产出配置 (产出两种液体) ---
-    "results": [
-        {"item": "heavy-stone", "amount": 1, "chance": 0.25},
-        {"item": "quartz-sand", "amount": 1, "chance": 0.4},
-        {"item": "aurum", "amount": 1, "chance": 0.2},
-        {"item": "palladium", "amount": 1, "chance": 0.15}
-    ],
+    "category": "crafting",
 
     "drawer": [
         {

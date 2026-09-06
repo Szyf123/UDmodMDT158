@@ -1,0 +1,59 @@
+{
+    "type": "payload",
+    "name": "player2",
+    "localizedName": "单胞",
+    "description": "二型核心机",
+    "health": 70,
+    "speed": 4.0,
+    "hitSize": 14,
+    "armor": 0,
+
+    "mineTier": 0,
+    "mineSpeed": 1.5,
+    "itemCapacity": 60,
+    "buildSpeed": 1.2,
+
+    "payloadCapacity": 256,
+    "pickupUnits": false,
+
+    "flying": true,
+    "accel": 0.05,
+    "drag": 0.02,
+    "rotateSpeed": 4.0,
+
+    "engines": [
+        {"x": -5, "y": -5, "radius": 2.2, "rotation": -90},
+        {"x": 5, "y": -5, "radius": 2.2, "rotation": -90}
+    ],
+    "engineSize": 0,
+    "engineColor": "4DABD1",
+    "abilities": [
+        {"type": "MoveEffectAbility", "x": -5, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 2.0, "interval": 3},
+        {"type": "MoveEffectAbility", "x": 5, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 2.0, "interval": 3}
+    ],
+
+    "targetAir": true,
+    "targetGround": true,
+
+    "weapons": [
+        {
+            "name": "player-lightning-turret-gun",
+            "mirror": false,
+            "x": 0,
+            "y": 1,
+            "reload": 15,
+            "shootSound": "laser",
+            "rotateSpeed": 3.0,
+            "rotate": true,
+            "bullet": {
+                "type": "LightningBulletType",
+                "damage": 15,
+                "lightningLength": 8,
+                "lightningDamage": 10,
+                "lightningColor": "4DABD1",
+                "fromColor": "FFFFFF",
+                "toColor": "4DABD1"
+            }
+        }
+    ]
+}
