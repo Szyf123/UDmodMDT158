@@ -1,9 +1,10 @@
 {
     "type": "flying",
     "name": "ring-alpha",
-    "localizedName": "鱿鱼",
+    "localizedName": "徊漩",
     "health": 100,
-    "hitSize": 20,
+    "speed": 2,
+    "hitSize": 16,
     "research": "core-shard",
 
     "flying": true,
@@ -16,7 +17,6 @@
     {
         "type": "RegionPart",
         "name": "ud-mod-ring-alpha-spinner",
-        "outline": false,
         "layer": 114,
         "progress": "time",
         "clampProgress": false,
@@ -52,7 +52,8 @@
                 "healColor": "18E070",
                 "healEffect": "healBlockFull",
                 "shootEffect": "pointHit",
-                "hitEffect": "pointHit"
+                "hitEffect": "pointHit",
+                "despawnEffect": "pointHit"
             }
         },
         {
@@ -81,7 +82,8 @@
                 "healColor": "18E070",
                 "healEffect": "healBlockFull",
                 "shootEffect": "pointHit",
-                "hitEffect": "pointHit"
+                "hitEffect": "pointHit",
+                "despawnEffect": "pointHit"
             }
         }
     ]

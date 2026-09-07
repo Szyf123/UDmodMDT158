@@ -1,0 +1,35 @@
+{
+    "type": "flying",
+    "name": "ring-beta",
+    "localizedName": "涡核",
+    "health": 100,
+    "speed": 1.6,
+    "hitSize": 28,
+    "research": "core-shard",
+
+    "flying": true,
+    "buildSpeed": 1.2,
+
+    "engines": [
+        {"x": -8, "y": -8, "radius": 2.2, "rotation": -135},
+        {"x": -8, "y": 8, "radius": 2.2, "rotation": 135},
+        {"x": 8, "y": -8, "radius": 2.2, "rotation": -45},
+        {"x": 8, "y": 8, "radius": 2.2, "rotation": 45}
+    ],
+    "engineSize": 0,
+
+    "parts": [
+    {
+        "type": "RegionPart",
+        "name": "ud-mod-ring-beta-spinner",
+        "layer": 114,
+        "progress": "time",
+        "clampProgress": false,
+        "moveRot": 0.7,
+        "x": 0,
+        "y": 0
+    }
+    ],
+    "weapons": [
+    ]
+}

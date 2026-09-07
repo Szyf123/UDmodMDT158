@@ -26,7 +26,6 @@
         {"x": 5, "y": -5, "radius": 2.2, "rotation": -90}
     ],
     "engineSize": 0,
-    "engineColor": "4DABD1",
     "abilities": [
         {"type": "MoveEffectAbility", "x": -5, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 2.0, "interval": 3},
         {"type": "MoveEffectAbility", "x": 5, "y": -5, "effect": "missileTrail", "color": "4DABD1", "effectParam": 2.0, "interval": 3}

@@ -21,7 +21,6 @@
     "drag": 0.02,
     "rotateSpeed": 3.0,
 
-    "engineColor": "4DABD1",
     "engineOffset": 6,
     "abilities": [
         {"type": "MoveEffectAbility", "x": 0, "y": -4, "effect": "missileTrail", "color": "4DABD1", "effectParam": 1.5, "interval": 3}
