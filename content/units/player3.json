@@ -49,7 +49,7 @@
             "bullet": {
                 "type": "LightningBulletType",
                 "damage": 15,
-                "lightningLength": 8,
+                "lightningLength": 12,
                 "lightningDamage": 10,
                 "lightningColor": "4DABD1",
                 "fromColor": "FFFFFF",

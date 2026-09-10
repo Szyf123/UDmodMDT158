@@ -1,0 +1,243 @@
+{
+    "type": "flying",
+    "name": "ring-gamma",
+    "localizedName": "噬流",
+    "health": 18500,
+    "speed": 1,
+    "hitSize": 52,
+    "research": "core-shard",
+
+    "rotateSpeed": 3,
+
+    "flying": true,
+    "buildSpeed": 3,
+
+    "engines": [
+        {"x": -16, "y": -16, "radius": 4.6, "rotation": -135},
+        {"x": -16, "y": 16, "radius": 4.6, "rotation": 135},
+        {"x": 16, "y": -16, "radius": 4.6, "rotation": -45},
+        {"x": 16, "y": 16, "radius": 4.6, "rotation": 45}
+    ],
+    "engineSize": 0,
+
+    "parts": [
+        {
+            "type": "RegionPart",
+            "name": "ud-mod-ring-gamma-spinner-up",
+            "layer": 116,
+            "progress": "time",
+            "clampProgress": false,
+            "moveRot": 0.6,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "type": "RegionPart",
+            "name": "ud-mod-ring-gamma-spinner-down",
+            "layer": 114,
+            "progress": "time",
+            "clampProgress": false,
+            "moveRot": -0.4,
+            "x": 0,
+            "y": 0
+        }
+    ],
+
+    "abilities": [
+        {
+            "type": "ShieldArcAbility",
+            "radius": 40,
+            "angle": 361,
+            "angleOffset": 0,
+            "max": 600,
+            "regen": 0.2,
+            "cooldown": 300,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": 0,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": 45,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": -45,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": 90,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": -90,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": 135,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": -135,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        },
+        {
+            "type": "ShieldArcAbility",
+            "radius": 60,
+            "angle": 40,
+            "angleOffset": 180,
+            "max": 200,
+            "regen": 0.2,
+            "cooldown": 240,
+            "whenShooting": false
+        }
+    ],
+
+    "weapons": [
+        {
+            "name": "ring-gamma-main-weapon",
+            "x": 0,
+            "y": 0,
+            "rotate": true,
+            "mirror": false,
+            "reload": 135,
+            "shootY": 0,
+            "shootStatus": "slow",
+            "shootStatusDuration": 150,
+            "bullet": {
+                "type": "BasicBulletType",
+                "sprite": "ud-mod-ring-gamma-main-weapon-bullet",
+                "speed": 1,
+                "lifetime": 100,
+                "collides": false,
+                "keepVelocity": false,
+                "width": 22,
+                "height": 22,
+                "hitSize": 22,
+                "healPercent": 5,
+                "spin": 4,
+                "shrinkX": 0.7,
+                "shrinkY": 0.7,
+                "backColor": "18E070",
+                "frontColor": "FFFFFF",
+                "damage": 300,
+                "splashDamage": 220,
+                "splashDamageRadius": 115,
+                "hitColor": "18E070",
+                "hitEffect": ["greenBomb", "shockwave"],
+                "despawnEffect": ["greenBomb", "shockwave"],
+                "collidesGround": true,
+                "collidesAir": false,
+                "collidesTeam": false,
+                "fragBullet": {
+                    "type": "MissileBulletType",
+                    "speed": 4.2,
+                    "damage": 30,
+                    "width": 8,
+                    "height": 8,
+                    "shrinkX": 0,
+                    "shrinkY": 0,
+                    "drag": -0.003,
+                    "lifetime": 24,
+                    "homingPower": 0.12,
+                    "homingRange": 80,
+                    "keepVelocity": false,
+                    "splashDamage": 45,
+                    "splashDamageRadius": 35,
+                    "status": "corroded",
+                    "statusDuration": 120,
+                    "weaveScale": 8,
+                    "weaveMag": 2,
+                    "trailColor": "18E070",
+                    "backColor": "18E070",
+                    "frontColor": "FFFFFF",
+                    "hitEffect": "blastExplosion",
+                    "despawnEffect": "blastExplosion"
+                },
+                "fragBullets": 32,
+                "fragOnHit": true,
+                "fragOnDespawn": true,
+                "fragRandomSpread": 360,
+                "fragVelocityMin": 0.6,
+                "fragVelocityMax": 1.0,
+                "fragLifeMin": 1.0,
+                "fragLifeMax": 1.0
+            }
+        },
+        {
+	    "type": "RepairBeamWeapon",
+            "name": "ring-gamma-repair-laser",
+            "x": 25,
+            "y": 25,
+            "mirror": true,
+            "rotate": true,
+            "bullet": {
+                "type": "BulletType",
+                "maxRange": 180
+            },
+            "repairSpeed": 1.2,
+            "laserColor": "18E070",
+            "laserTopColor": "FFFFFF",
+            "healColor": "18E070"
+        },
+        {
+	    "type": "RepairBeamWeapon",
+            "name": "ring-gamma-repair-laser",
+            "x": 25,
+            "y": -25,
+            "mirror": true,
+            "rotate": true,
+            "bullet": {
+                "type": "BulletType",
+                "maxRange": 180
+            },
+            "repairSpeed": 1.2,
+            "laserColor": "18E070",
+            "laserTopColor": "FFFFFF",
+            "healColor": "18E070"
+        }
+    ]
+}

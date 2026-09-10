@@ -2,10 +2,12 @@
     "type": "flying",
     "name": "ring-beta",
     "localizedName": "涡核",
-    "health": 100,
+    "health": 3200,
     "speed": 1.6,
     "hitSize": 28,
     "research": "core-shard",
+
+    "rotateSpeed": 4,
 
     "flying": true,
     "buildSpeed": 1.2,
@@ -30,6 +32,76 @@
         "y": 0
     }
     ],
+
+    "abilities": [
+        {
+            "type": "ShieldRegenFieldAbility",
+            "amount": 25,
+            "max": 250,
+            "reload": 60,
+            "range": 120
+        }
+    ],
     "weapons": [
+        {
+            "name": "ring-beta-main-weapons",
+            "x": 0,
+            "y": 17,
+            "rotate": false,
+            "mirror": false,
+            "reload": 65,
+            "bullet": {
+                "type": "LaserBulletType",
+                "damage": 160,
+                "length": 200,
+                "width": 16,
+                "collidesTeam": true,
+                "healPercent": 2,
+                "healAmount": 30,
+                "healColor": "18E070",
+                "healEffect": "healBlockFull",
+                "colors": ["18E07080", "18E070", "FFFFFF"]
+            }
+        },
+        {
+            "name": "ring-beta-main-weapons",
+            "x": 12,
+            "y": 14,
+            "rotate": false,
+            "mirror": false,
+            "reload": 40,
+            "bullet": {
+                "type": "LaserBulletType",
+                "damage": 80,
+                "length": 160,
+                "width": 8,
+                "collidesTeam": true,
+                "healPercent": 1,
+                "healAmount": 30,
+                "healColor": "18E070",
+                "healEffect": "healBlockFull",
+                "colors": ["18E07080", "18E070", "FFFFFF"]
+            }
+        },
+        {
+            "name": "ring-beta-main-weapons",
+            "x": -12,
+            "y": 14,
+            "rotate": false,
+            "mirror": false,
+            "reload": 40,
+            "bullet": {
+                "type": "LaserBulletType",
+                "damage": 80,
+                "length": 160,
+                "width": 8,
+                "collidesTeam": true,
+                "healPercent": 1,
+                "healAmount": 30,
+                "healColor": "18E070",
+                "healEffect": "healBlockFull",
+                "colors": ["18E07080", "18E070", "FFFFFF"]
+            }
+        }
     ]
 }

@@ -67,8 +67,8 @@
                 "pierceCap": 2,
                 "pierceDamageFactor": 0.6,
                 "backColor": "F57C3B",
-		"frontColor": "FFFFFF",
-		"mixColorTo": "FFFFFF"
+		        "frontColor": "FFFFFF",
+		        "mixColorTo": "FFFFFF"
             },
             "parts": [
                 {

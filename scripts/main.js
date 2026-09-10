@@ -9,36 +9,12 @@ const deepSea = Attribute.add("deep-sea");
     var MOD_ID = "ud-mod";
     var attempts = 0;
 
-    function fixWeaponParts(){
-        var unitName = MOD_ID + "-treadmill-beta";
-        var unit = null;
+    // 需要修补武器部件的单位裸名列表
+    var TARGET_UNITS = ["treadmill-beta", "my-test-weap-unit"];
 
-        try { unit = Vars.content.getByName("UnitType", unitName); } catch(e) {}
-        if (!unit) try { unit = Vars.content.getByID("UnitType", unitName); } catch(e) {}
-        if (!unit) try { unit = Vars.content.unit(unitName); } catch(e) {}
-        if (!unit) try { unit = Vars.content.find(unitName); } catch(e) {}
-
-        if (!unit){
-            var c = Vars.content;
-            for (var k in c){
-                try {
-                    var val = c[k];
-                    if (val && val.size !== undefined && val.get !== undefined){
-                        for (var j = 0; j < val.size; j++){
-                            var item = val.get(j);
-                            if (item && item.name && item.name.indexOf("treadmill") >= 0){
-                                unit = item;
-                                break;
-                            }
-                        }
-                    }
-                } catch(e) {}
-                if (unit) break;
-            }
-        }
-
+    function loadPartsForUnit(unit){
         if (!unit || !unit.weapons || unit.weapons.size === 0) return false;
-
+        var fixedAny = false;
         for (var w = 0; w < unit.weapons.size; w++){
             var weapon = unit.weapons.get(w);
             if (!weapon.parts) continue;
@@ -49,10 +25,42 @@ const deepSea = Attribute.add("deep-sea");
                 if (part.name && part.name.indexOf(MOD_ID) !== 0){
                     part.name = MOD_ID + "-" + part.name;
                 }
-                part.load(part.name || "");
+                try { part.load(part.name || ""); fixedAny = true; } catch(eLoad) {}
             }
         }
-        return true;
+        return fixedAny;
+    }
+
+    function findUnitByBareName(bareName){
+        var fullName = MOD_ID + "-" + bareName;
+        var unit = null;
+        try { unit = Vars.content.unit(fullName); } catch(e) {}
+        if (unit) return unit;
+        try { unit = Vars.content.getByName("UnitType", fullName); } catch(e) {}
+        if (unit) return unit;
+        try {
+            var us = Vars.content.units();
+            if (us){
+                for (var j = 0; j < us.size; j++){
+                    var u = us.get(j);
+                    if (u && u.name === fullName) return u;
+                }
+            }
+        } catch(eSeq) {}
+        return null;
+    }
+
+    function fixWeaponParts(){
+        var anyFound = false;
+        var allFixed = true;
+        for (var i = 0; i < TARGET_UNITS.length; i++){
+            var unit = findUnitByBareName(TARGET_UNITS[i]);
+            if (!unit){ allFixed = false; continue; }
+            anyFound = true;
+            if (!loadPartsForUnit(unit)) allFixed = false;
+        }
+        // 所有目标单位都已找到且都已处理完才算成功；否则继续重试
+        return anyFound && allFixed;
     }
 
     function retry(){

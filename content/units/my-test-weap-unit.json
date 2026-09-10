@@ -1,38 +1,97 @@
 {
-  "type": "flying",
-  "name": "my-test-weap-unit",
-  "localizedName": "武器测试载体",
-  "health": 100,
-  "hitSize": 1,
-  "research": "core-shard",
+    "type": "flying",
+    "name": "my-test-weap-unit",
+    "localizedName": "武器测试载体",
+    "health": 100,
+    "hitSize": 1,
+    "research": "core-shard",
 
-  "flying": true,
-  "wobble": false,
+    "flying": true,
+    "wobble": false,
 
-  "weapons": [
+    "weapons": [
         {
-            "name": "ring-alpha-main-weapon",
-            "x": 12,
+            "type": "Weapon",
+            "name": "test-weapon",
+            "mirror": true,
+            "x": 20,
             "y": 0,
-            "mirror": false,
             "rotate": true,
-            "reload": 48,
-            "shake": 0.6,
-            "inaccuracy": 2,
-            "showBase": false,
+            "rotationLimit": 15,
+            "rotateSpeed": 2,
+            "reload": 210,
+            "shootStatus": "slow",
+            "shootStatusDuration": 460,
+            "recoil": 12,
+            "shootY": -12,
             "shoot": {
-                "shots": 2
+                "firstShotDelay": 300,
+                "shots": 3,
+                "shotDelay": 12
             },
             "bullet": {
                 "type": "LaserBulletType",
-                "damage": 10,
-                "length": 140,
-                "width": 6,
-                "lifetime": 12,
-                "color": "#20ff00",
-                "buildAbsorb": true,
-                "buildAbsorbMultiplier": 0.055
-            }
+                "length": 640,
+                "width": 24,
+                "damage": 500,
+                "pierce": true,
+                "colors": ["18E07080", "18E070", "FFFFFF"],
+                "shootEffect": "shootBig",
+                "hitColor": "18E070",
+                "hitEffect": "titanExplosionSmall",
+                "status": "sta-throughout",
+                "statusDuration": 192
+            },
+            "parts": [
+                {
+                    "type": "RegionPart",
+                    "name": "test-weapon-recoil-l",
+                    "x": 0,
+                    "y": 0,
+                    "progress": "warmup",
+                    "moveX": -1,
+                    "under": false
+                },
+                {
+                    "type": "RegionPart",
+                    "name": "test-weapon-recoil-r",
+                    "x": 0,
+                    "y": 0,
+                    "progress": "warmup",
+                    "moveX": 1,
+                    "under": false
+                },
+                {
+                    "type": "RegionPart",
+                    "name": "test-weapon-recoil-edge1",
+                    "x": 0,
+                    "y": 0,
+                    "progress": "warmup",
+                    "moveY": 25,
+                    "under": true,
+                    "outline": false
+                },
+                {
+                    "type": "RegionPart",
+                    "name": "test-weapon-recoil-edge2",
+                    "x": 0,
+                    "y": 0,
+                    "progress": "warmup",
+                    "moveY": 40,
+                    "under": true,
+                    "outline": false
+                },
+                {
+                    "type": "RegionPart",
+                    "name": "test-weapon-recoil-edge3",
+                    "x": 0,
+                    "y": 0,
+                    "progress": "warmup",
+                    "moveY": 55,
+                    "under": true,
+                    "outline": false
+                }
+            ]
         }
-  ]
+    ]
 }

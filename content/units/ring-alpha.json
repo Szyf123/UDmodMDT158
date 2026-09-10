@@ -2,10 +2,12 @@
     "type": "flying",
     "name": "ring-alpha",
     "localizedName": "徊漩",
-    "health": 100,
+    "health": 140,
     "speed": 2,
     "hitSize": 16,
     "research": "core-shard",
+
+    "rotateSpeed": 5,
 
     "flying": true,
     "buildSpeed": 0.4,
@@ -25,11 +27,21 @@
         "y": 0
     }
     ],
+
+    "abilities": [
+        {
+            "type": "RepairFieldAbility",
+            "amount": 15,
+            "reload": 120,
+            "range": 100
+        }
+    ],
+    
     "weapons": [
         {
             "name": "ring-alpha-main-weapon",
-            "x": 8,
-            "y": 8,
+            "x": 7,
+            "y": 7,
             "mirror": true,
             "rotate": true,
             "reload": 30,
@@ -58,8 +70,8 @@
         },
         {
             "name": "ring-alpha-main-weapon",
-            "x": 8,
-            "y": -8,
+            "x": 7,
+            "y": -7,
             "mirror": true,
             "rotate": true,
             "reload": 24,
